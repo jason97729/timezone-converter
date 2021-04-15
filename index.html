@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Timezone Converter</title>
+        <script src='moment.js'></script>
+        <script src="moment-timezone-with-data.js"></script>
+        <link rel="stylesheet" href='style.css' type='text/css' />
+        <script src="index.js" defer></script>
+        <script src="config.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sriracha">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+        <script src= "https://maps.googleapis.com/maps/api/js?key=AIzaSyCOQC12gs_h6JgNc9Q1IRkSmVM8WYy_SOA&libraries=places&callback=initAutocomplete" async defer></script>
+    </head>
+
+    <body id='body' class='color'>
+        <header>
+            <h1 id='name'>Timezone Converter</h1>
+        </header>
+        
+        <section id='section'>
+            <h3 id='current-time'></h3>
+        </section>
+
+        
+        <section id='autocomplete_section'>
+            <h1>Enter the city and date-time you are converting from: </h1>
+            <input id="autocomplete" placeholder="Enter a place" type="text" size="50"/>
+
+        </section>
+
+        <section class="flatpickr">
+            <input type="text" id="originalDateTime" placeholder="Select Date.." data-input> <!-- input is mandatory -->
+            <button id='clear'>Click here to clear</button>
+        </section>
+
+        <section id='autocomplete_section'>
+            <h1>Enter the city you are converting your date-time into: </h1>
+            <input id="autocomplete2" placeholder="Enter a place" type="text" size="50"/>
+
+        </section>
+
+        <section id='Enter'>
+            <button id='enter'>Enter</button>
+        </section>
+
+        <section id='info'>
+        </section>
+
+    </body>
+
+    <footer>
+        <p>Jason Chou</p> 
+        <p>University of Michigan School of Information</p>
+    </footer>
+</html>
