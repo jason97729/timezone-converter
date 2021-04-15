@@ -48,7 +48,7 @@ function onPlaceChanged(autocompleteElement, autocomplete, dict) {
     var lat = place.geometry.location.lat();
     var lng = place.geometry.location.lng();
     latLng = lat.toString() + ',' + lng.toString();
-    url = 'https://dev.virtualearth.net/REST/v1/timezone/' + latLng + '?key=' + config.bingMapsApi;
+    url = 'https://dev.virtualearth.net/REST/v1/timezone/' + latLng + '?key=AmeEA92acWuOfdQ8E2lUS41eLQ_x0og1zYMvnYtFHZTLX1nTRFwHDGHbr0X6dskA';
 
     if (!place.geometry) {
         // User did not select a prediction; reset the input field
