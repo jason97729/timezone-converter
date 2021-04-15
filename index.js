@@ -15,7 +15,7 @@ const autocomplete2Element =  document.getElementById('autocomplete2');
 
 const password = prompt("Please enter a password");
 
-if (password === 'jachou') {
+if (password === config.password) {
     function updateTime() {
         const now = moment().format('YYYY-MM-DD, h:mm:ss A');
         current_time.textContent = 'Local time : ' + now;
