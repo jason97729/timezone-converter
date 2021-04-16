@@ -15,7 +15,7 @@ const autocomplete2Element =  document.getElementById('autocomplete2');
 
 
 function updateTime() {
-    const now = moment().format('YYYY-MM-DD, h:mm:ss A');
+    const now = moment().format('dddd, YYYY-MM-DD, h:mm:ss A');
     current_time.textContent = 'Local time : ' + now;
 }
 
@@ -76,7 +76,7 @@ clearButton.addEventListener('click', clear);
 
 function convertTimezone(originalDateTime, originalTimezone, convertPlaceTime) {
     const original = moment.tz(originalDateTime, originalTimezone)
-    const convert = original.clone().tz(convertPlaceTime.timezone).format('YYYY-MM-DD, h:mm A');
+    const convert = original.clone().tz(convertPlaceTime.timezone).format('dddd, YYYY-MM-DD, h:mm A');
     convertPlaceTime.dateTime = convert
 }
 
@@ -88,7 +88,7 @@ async function enter() {
     infoSection.innerHTML=''
     const originalPlaceTimeElement = document.createElement("h3");
     const convertPlaceTimeElement = document.createElement("h3");
-    originalPlaceTimeElement.textContent = 'Original Place and Time: '+ originalPlaceTime.place + ', ' + moment(originalPlaceTime.dateTime).format('YYYY-MM-DD, h:mm A');
+    originalPlaceTimeElement.textContent = 'Original Place and Time: '+ originalPlaceTime.place + ', ' + moment(originalPlaceTime.dateTime).format('dddd, YYYY-MM-DD, h:mm A');
     convertPlaceTimeElement.textContent = 'Converted Place and Time: '+ convertPlaceTime.place + ', ' + convertPlaceTime.dateTime;
     infoSection.append(originalPlaceTimeElement);
     infoSection.append(convertPlaceTimeElement);
